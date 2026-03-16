@@ -1,0 +1,30 @@
+name: Naver Rank Checker
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+    - cron: "0 7 * * *"
+
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 코드 가져오기
+        uses: actions/checkout@v3
+
+      - name: Python 설치
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: 라이브러리 설치
+        run: |
+          pip install -r requirements.txt
+
+      - name: 크롤러 실행
+        env:
+          SERVICEACCOUNT: ${{ secrets.SERVICEACCOUNT }}
+        run: python crawler.py
