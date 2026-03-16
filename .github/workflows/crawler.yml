@@ -27,4 +27,4 @@ jobs:
       - name: 크롤러 실행
         env:
           SERVICEACCOUNT: ${{ secrets.SERVICEACCOUNT }}
-        run: python crawler.py
+        run: python -u crawler.py
