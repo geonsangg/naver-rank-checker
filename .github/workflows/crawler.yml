@@ -1,11 +1,11 @@
 name: Naver Rank Checker
 
-on:
-  schedule:
-    - cron: "3 1 * * *"
-    - cron: "3 7 * * *"
-
-  workflow_dispatch:
+# on:
+ # schedule:
+  #  - cron: "3 1 * * *"
+   # - cron: "3 7 * * *"
+#
+  # workflow_dispatch:
 
 jobs:
   run-script:
