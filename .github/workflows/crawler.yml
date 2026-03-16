@@ -2,8 +2,8 @@ name: Naver Rank Checker
 
 on:
   schedule:
-    - cron: "0 1 * * *"
-    - cron: "0 7 * * *"
+    - cron: "3 1 * * *"
+    - cron: "3 7 * * *"
 
   workflow_dispatch:
 
